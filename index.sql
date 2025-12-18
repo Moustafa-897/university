@@ -2,3 +2,4 @@ CREATE DATABASE university_db;
 CREATE TABLE departments( 
     dept_id INT PRIMARY KEY, 
     dept_name VARCHAR(50) NOT NULL );
+CREATE TABLE courses( course_id INT PRIMARY KEY, course_name VARCHAR(50) NOT NULL, credits INT NOT NULL, dept_id INT, FOREIGN KEY (dept_id) REFERENCES departments(dept_id) ON DELETE CASCADE );    
